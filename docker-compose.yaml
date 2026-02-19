@@ -1,0 +1,13 @@
+services:
+
+  no-talk:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    image: no-talk-image
+    ports:
+      - "3000:3000"
+    volume:
+      - .:/app
+      - /app/node_modules
