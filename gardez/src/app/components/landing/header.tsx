@@ -2,7 +2,8 @@
 
 import { useRef, useEffect } from "react";
 import Logo from "../ui/logo-gardez";
-import { Navbar, MenuIcon } from "../ui/navigation";
+import Navbar from "../ui/navigation/navbar";
+import { MenuIcon } from "../ui/navigation/menuMobile";
 
 export default function Header() {
   const headerElement = useRef<HTMLDivElement | null>(null);
@@ -27,10 +28,10 @@ export default function Header() {
     <header ref={headerElement} className="header-active">
       <Logo />
       <Navbar
-        navClass="flex items-center max-md:hidden"
-        textClass="p-2 m-1 text-lx hover:pointer hover:text-mauve-500"
+        conteinerNav="flex items-center max-md:hidden"
+        contentText="p-2 m-1 text-lx hover:pointer hover:text-mauve-500"
       />
-      <MenuIcon auxClass="md:hidden" />
+      <MenuIcon menuDisplay="md:hidden" />
     </header>
   );
 }

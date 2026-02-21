@@ -10,6 +10,7 @@
         top: 0px
     }
 }
+
 .header-active {
     @apply h-[80] bg-white flex items-center justify-between px-10;
 }
@@ -17,16 +18,12 @@
     @apply h-[80] bg-white fixed flex w-dvw items-center justify-between px-10;
     animation: littleAnimation 1s ease forwards;
 }
+
 .btn-icon {
     @apply m-1 p-1 rounded-lg hover:bg-gray-200 cursor-pointer;
 }
-.menu-mobile {
-    @apply fixed top-20 w-dvh h-dvh bg-white p-10;
-    left: 800px;
-    transition: left 1s ease;
-}
-.menu-mobile-activate {
-    @apply fixed top-20 w-dvh h-dvh bg-white p-10;
-    left: 0px;
+
+.menu-opened {
+    @apply fixed top-20 left-0 w-dvh h-dvh bg-white p-10;
 }
 
