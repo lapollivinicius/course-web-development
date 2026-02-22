@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Navbar from "./navbar";
+import { Navbar } from "./Navbar";
 
 type menuProps = {
   conteinerNav?: string;
-  conteinerText?: string;
-  contentText?: string;
+  conteinerLink?: string;
+  contentLink?: string;
   menuDisplay?: string
 };
 
 // Menu Button
-export function MenuIcon({conteinerNav, conteinerText, contentText, menuDisplay }: menuProps) {
+export function MenuIcon({conteinerNav, conteinerLink, contentLink, menuDisplay }: menuProps) {
 
   const [open, setOpen] = useState<boolean>(false) 
 
@@ -39,8 +39,8 @@ export function MenuIcon({conteinerNav, conteinerText, contentText, menuDisplay 
       >
         <Navbar
           conteinerNav="h-dvh"
-          contentText="p-1 text-2xl flex w-dvh font-bold hover:pointer hover:text-gray-400"
-          conteinerText="flex flex-col mb-5"
+          contentLink="p-1 text-2xl flex w-dvh font-bold hover:pointer hover:text-gray-400"
+          conteinerLink="flex flex-col mb-5"
         />
       </div>
     </div>

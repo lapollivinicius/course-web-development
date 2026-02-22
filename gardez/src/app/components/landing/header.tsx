@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import Logo from "../ui/logo-gardez";
-import Navbar from "../ui/navigation/navbar";
-import { MenuIcon } from "../ui/navigation/menuMobile";
+import { MenuIcon } from "../ui/navigation/MenuMobile";
+import Logo from "../ui/LogoGardez";
+import { Navbar } from "../ui/navigation/Navbar";
 
 export default function Header() {
   const headerElement = useRef<HTMLDivElement | null>(null);
@@ -26,10 +26,10 @@ export default function Header() {
 
   return (
     <header ref={headerElement} className="header-active">
-      <Logo />
+      <Logo widthLogo={100} heightLogo={50} />
       <Navbar
         conteinerNav="flex items-center max-md:hidden"
-        contentText="p-2 m-1 text-lx hover:pointer hover:text-mauve-500"
+        contentLink="p-2 m-1 text-lx hover:pointer hover:text-mauve-500"
       />
       <MenuIcon menuDisplay="md:hidden" />
     </header>

@@ -20,10 +20,15 @@
 }
 
 .btn-icon {
-    @apply m-1 p-1 rounded-lg hover:bg-gray-200 cursor-pointer;
+    @apply m-1 p-1 rounded-lg hover:bg-gray-300 cursor-pointer;
 }
 
 .menu-opened {
     @apply fixed top-20 left-0 w-dvh h-dvh bg-white p-10;
 }
 
+/* ============== FOOTER AJUSTIMENTS ============== */
+
+.footer {
+    @apply absolute bottom-0 h-100 w-dvw bg-gray-200 px-10 py-10 flex flex-wrap justify-between gap-1 max-md:justify-center; 
+}

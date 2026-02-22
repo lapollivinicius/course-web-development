@@ -1,9 +1,8 @@
 import Link from "next/link";
 
-type menuProps = {
-  conteinerNav?: string;
-  conteinerText?: string;
-  contentText?: string;
+type linkProps = {
+  conteinerLink?: string;
+  contentLink?: string;
 };
 
 // list items menu
@@ -17,12 +16,12 @@ export const menu: menuItems[] = [
 ];
 
 // Menu Text Bar
-export default function TextBar({ conteinerText, contentText }: menuProps) {
+export default function LinkNav({ conteinerLink, contentLink }: linkProps) {
   return (
-    <div className={conteinerText}>
+    <div className={conteinerLink}>
       {menu.map((e) => {
         return (
-          <Link className={contentText} key={e.page} href={e.link}>
+          <Link className={contentLink} key={e.page} href={e.link}>
             {e.page}
           </Link>
         );

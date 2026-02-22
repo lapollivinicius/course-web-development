@@ -1,23 +1,23 @@
-import TextBar from "./LinkNav";
-import Iconbar from "./IconNav";
+import LinkNav from "./LinkNav";
+import IconNav from "./IconNav";
 
 type menuProps = {
   conteinerNav?: string;
-  conteinerText?: string;
-  contentText?: string;
+  conteinerLink?: string;
+  contentLink?: string;
 };
 
 
 // Navigation bar (Text + Icons) to header
-export default function Navbar({
+export function Navbar({
   conteinerNav,
-  contentText,
-  conteinerText,
+  contentLink,
+  conteinerLink,
 }: menuProps) {
   return (
     <nav className={conteinerNav}>
-      <TextBar contentText={contentText} conteinerText={conteinerText} />
-      <Iconbar />
+      <LinkNav contentLink={contentLink} conteinerLink={conteinerLink} />
+      <IconNav />
     </nav>
   );
 }

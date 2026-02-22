@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
+type iconProps = {
+  containerIcon?: string
+}
+
 // Menu Icons Bar
-export default function Iconbar() {
+export default function IconNav({containerIcon}: iconProps) {
   return (
-    <div className={"flex "}>
+    <div className={"flex " + containerIcon}>
       <Link href={"https://www.instagram.com"}>
         <Image
           src="/svg/instagram.svg"
