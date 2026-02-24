@@ -1,13 +1,17 @@
-import Header from "./components/landing/header";
-import Footer from "./components/landing/footer";
+import Header from "./components/landing/Header";
+import Footer from "./components/landing/Footer";
+import Main from "./components/landing/Main";
 
 export default function Home() {
   return (
-    <div id="main-content" className="bg-amber-100">
+    <div className="main-content">
 
-      <Header/>
+      <Header />
 
+      <Main />
+      
       <Footer />
+
 
     </div>
   );

@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { MenuIcon } from "../ui/navigation/MenuMobile";
-import Logo from "../ui/LogoGardez";
-import { Navbar } from "../ui/navigation/Navbar";
+import Logo from "@/app/components/ui/LogoGardez";
+import { Navbar } from "@/app/components/ui/navigation/Navbar";
+import { MenuIcon } from "@/app/components/ui/navigation/MenuMobile";
+import styles from "@/app/components/styles/Header.module.scss"
 
 export default function Header() {
   const headerElement = useRef<HTMLDivElement | null>(null);
@@ -11,11 +12,11 @@ export default function Header() {
   useEffect(() => {
     function onScroll() {
       if (window.scrollY > 100) {
-        headerElement.current?.classList.remove("header-active");
-        headerElement.current?.classList.add("header-scroll");
+        headerElement.current?.classList.remove(styles.headerActive);
+        headerElement.current?.classList.add(styles.headerScroll);
       } else {
-        headerElement.current?.classList.remove("header-scroll");
-        headerElement.current?.classList.add("header-active");
+        headerElement.current?.classList.remove(styles.headerScroll);
+        headerElement.current?.classList.add(styles.headerActive);
       }
     }
 
@@ -25,7 +26,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header ref={headerElement} className="header-active">
+    <header ref={headerElement} className={"z-10 " + styles.headerActive}>
       <Logo widthLogo={100} heightLogo={50} />
       <Navbar
         conteinerNav="flex items-center max-md:hidden"

@@ -1,0 +1,28 @@
+@reference "tailwindcss";
+
+.sectionCta {
+    @apply flex justify-center gap-10 flex-wrap;
+    @apply p-10 text-black;
+
+    .textCta {
+        @apply flex flex-col justify-center;
+        @apply w-[450] h-[450];
+        @apply max-md:items-center;
+
+        h2 {
+            @apply text-7xl font-bold;
+            @apply max-md:text-center max-md:text-6xl;
+        }
+        p {
+            @apply italic text-xl;
+        }
+        button {
+            @apply mt-5 w-30;
+        }
+    }
+
+    .imageCta {
+        @apply relative h-[450] w-[450];
+        @apply overflow-hidden rounded-4xl aspect-square;
+    }
+}

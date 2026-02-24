@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Navbar } from "./Navbar";
+import styles from "@/app/components/styles/Header.module.scss"
 
 type menuProps = {
   conteinerNav?: string;
@@ -35,7 +36,7 @@ export function MenuIcon({conteinerNav, conteinerLink, contentLink, menuDisplay 
         />
       </button>
       <div
-        className={"fixed top-20 left-500 w-dvh h-dvh bg-white p-10 transition-all duration-500 ease" + (open ? " menu-opened" : "")}
+        className={styles.menuClosed + (open ? " " + styles.menuOpened : "")}
       >
         <Navbar
           conteinerNav="h-dvh"
