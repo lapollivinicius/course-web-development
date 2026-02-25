@@ -1,6 +1,6 @@
-import Header from "./components/landing/Header";
-import Footer from "./components/landing/Footer";
-import Main from "./components/landing/Main";
+import Header from "@/app/components/landing/Header";
+import Footer from "@/app/components/landing/Footer";
+import Main from "@/app/components/landing/Main";
 
 export default function Home() {
   return (
@@ -11,7 +11,6 @@ export default function Home() {
       <Main />
       
       <Footer />
-
 
     </div>
   );

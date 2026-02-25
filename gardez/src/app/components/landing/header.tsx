@@ -1,32 +1,26 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import Logo from "@/app/components/ui/LogoGardez";
+import { useEffect, useState } from "react";
 import { Navbar } from "@/app/components/ui/navigation/Navbar";
 import { MenuIcon } from "@/app/components/ui/navigation/MenuMobile";
 import styles from "@/app/components/styles/Header.module.scss"
+import Logo from "@/app/components/ui/LogoGardez";
 
 export default function Header() {
-  const headerElement = useRef<HTMLDivElement | null>(null);
+  const [onScroll, setOnScroll] = useState<boolean>(false)
 
   useEffect(() => {
-    function onScroll() {
-      if (window.scrollY > 100) {
-        headerElement.current?.classList.remove(styles.headerActive);
-        headerElement.current?.classList.add(styles.headerScroll);
-      } else {
-        headerElement.current?.classList.remove(styles.headerScroll);
-        headerElement.current?.classList.add(styles.headerActive);
-      }
+
+    function scrolling() {
+        setOnScroll(window.scrollY > 100)
     }
 
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", scrolling);
+    return () => window.removeEventListener("scroll", scrolling);
   }, []);
 
   return (
-    <header ref={headerElement} className={"z-10 " + styles.headerActive}>
+    <header className={styles.headerActive + " " + (onScroll ? styles.headerScroll : "")}>
       <Logo widthLogo={100} heightLogo={50} />
       <Navbar
         conteinerNav="flex items-center max-md:hidden"

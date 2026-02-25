@@ -1,25 +1,49 @@
-"use client"
+"use client";
 
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { Navbar } from "./Navbar";
-import styles from "@/app/components/styles/Header.module.scss"
+import styles from "@/app/components/styles/Header.module.scss";
 
 type menuProps = {
   conteinerNav?: string;
   conteinerLink?: string;
   contentLink?: string;
-  menuDisplay?: string
+  menuDisplay?: string;
 };
 
 // Menu Button
-export function MenuIcon({conteinerNav, conteinerLink, contentLink, menuDisplay }: menuProps) {
+export function MenuIcon({
+  conteinerNav,
+  conteinerLink,
+  contentLink,
+  menuDisplay,
+}: menuProps) {
+  const [open, setOpen] = useState<boolean>(false);
 
-  const [open, setOpen] = useState<boolean>(false) 
+  const prevOverflow = useRef<string>("");
+
+  useEffect(() => {
+
+    console.log(document.body.style.overflow)
+
+    if (typeof document === "undefined") return;
+
+    if (open) {
+      prevOverflow.current = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = prevOverflow.current || "";
+    }
+    return () => {
+      document.body.style.overflow = prevOverflow.current || "";
+    };
+    
+  }, [open]);
 
   return (
     <div className={"flex " + menuDisplay}>
-      <button onClick={() => setOpen(!open)} >
+      <button onClick={() => setOpen(!open)}>
         <Image
           src="/svg/menu.svg"
           width={35}

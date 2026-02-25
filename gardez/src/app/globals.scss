@@ -1,18 +1,12 @@
 @import "tailwindcss";
 
-$primary-color: #417B5A;
-
-// * {
-//     border: 1px solid blue;
-// }
-
 :root {
     --primary-color: #417B5A;
 }
 
 // main content
 .main-content {
-    @apply h-auto;
+    @apply h-auto w-dvw;
 }
 
 // buttons 
@@ -22,6 +16,6 @@ $primary-color: #417B5A;
 
 .btn-default {
     @apply text-white font-semibold p-2 rounded-lg hover:opacity-80 cursor-pointer;
-    background-color: $primary-color;
+    background-color: var(--primary-color);
 }
 
