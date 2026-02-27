@@ -1,16 +1,21 @@
+import styles from "@/app/components/styles/Newsletter.module.css";
+
 export default function Newsletter() {
   return (
-    <form action={"POST"} className="flex flex-col">
-      <p className="font-bold text-xl py-3">NEWSLETTER</p>
-      <label htmlFor="email" className="flex flex-row border rounded-md">
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="E-mail" 
-          className=" rounded-md p-1 px-3 mr-1 focus:outline-0 w-70"
-        />
-        <button type="button" className="font-bold rounded-md p-2 hover:bg-gray-300 cursor-pointer">Send</button>
-      </label>
-    </form>
+    <div className={styles.newsletter}>
+      <h2 className={styles.ctaNewsletter}>Assine a nossa <br/> newsletter!</h2>
+      <form action={"POST"} className={styles.formNewsletter}>
+        <p className={styles.subtitle}>Fique por dentro das novidades</p>
+        <label htmlFor="email" className={styles.groupInput}>
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            className={styles.inputEmail}
+          />
+          <button type="button" className={styles.btnSend}>Send</button>
+        </label>
+      </form>
+    </div>
   );
 }

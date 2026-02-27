@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import styles from "@/app/components/styles/SectionCta.module.scss";
+import styles from "@/app/components/styles/SectionCta.module.css";
 import { motion } from "motion/react";
 
 export default function SectionCta() {

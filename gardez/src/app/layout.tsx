@@ -1,4 +1,4 @@
-import './globals.scss';
+import './globals.css';
 
 export default function RootLayout({
   children,
@@ -7,7 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className='h-screen bg-blue-300'> 
+      <body className='h-screen min-w-[500px]'> 
         {children}
       </body>
     </html>

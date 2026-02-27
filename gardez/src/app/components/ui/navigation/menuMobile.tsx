@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { Navbar } from "./Navbar";
-import styles from "@/app/components/styles/Header.module.scss";
+import styles from "@/app/components/styles/Header.module.css";
 
 type menuProps = {
   conteinerNav?: string;

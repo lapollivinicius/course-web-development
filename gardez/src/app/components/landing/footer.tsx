@@ -2,7 +2,7 @@ import Logo from "@/app/components/ui/LogoGardez";
 import IconNav from "@/app/components/ui/navigation/IconNav";
 import LinkNav from "@/app/components/ui/navigation/LinkNav";
 import Newsletter from "@/app/components/ui/Newsletter";
-import styles from "@/app/components/styles/Footer.module.scss"
+import styles from "@/app/components/styles/Footer.module.css"
 import Link from "next/link";
 
 export default function Footer() {

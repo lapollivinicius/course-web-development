@@ -6,7 +6,7 @@
 
     .textCta {
         @apply flex flex-col justify-center;
-        @apply w-[450] h-[450];
+        @apply w-[500px] h-[500px];
         @apply max-md:items-center;
 
         h2 {
@@ -22,7 +22,7 @@
     }
 
     .imageCta {
-        @apply relative h-[450] w-[450];
+        @apply relative h-[500px] w-[500px];
         @apply overflow-hidden rounded-4xl aspect-square;
     }
 }

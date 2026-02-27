@@ -1,8 +1,0 @@
-@reference "tailwindcss";
-
-.footer {
-    @apply flex flex-wrap justify-between gap-1;
-    @apply relative left-0 bottom-0 h-auto w-screen px-10 py-10;
-    @apply bg-gray-200; 
-    @apply max-md:justify-center; 
-}

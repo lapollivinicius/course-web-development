@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+.newsletter {
+  @apply bg-gray-300 p-10 absolute top-[-19%] left-[50%] -translate-x-1/2 w-[80%] rounded-3xl flex flex-row flex-wrap justify-between max-md:justify-center items-center;
+}
+.ctaNewsletter {
+  @apply text-5xl max-md:text-3xl font-bold uppercase leading-[0.9] max-md:text-center;
+}
+.formEmail {
+  @apply flex flex-row max-md:flex-col gap-3;
+}
+.subtitle {
+  @apply font-bold text-lg text-gray-500 py-3;
+}
+.groupInput {
+  @apply flex flex-row gap-0 flex-nowrap;
+}
+.inputEmail {
+  @apply rounded-bl-xl rounded-tl-xl p-1 px-3 focus:outline-0 bg-white;
+}
+.btnSend {
+  @apply rounded-br-xl rounded-tr-xl font-bold p-2 px-4 hover:bg-gray-300 cursor-pointer bg-black text-white;
+}

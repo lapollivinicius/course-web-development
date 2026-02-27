@@ -4,12 +4,10 @@
     --primary-color: #417B5A;
 }
 
-// main content
 .main-content {
     @apply h-auto w-dvw;
 }
 
-// buttons 
 .btn-icon {
     @apply m-1 p-1 rounded-lg hover:bg-gray-300 cursor-pointer;
 }
