@@ -33,7 +33,7 @@ export default function Header() {
     <header
       className={styles.headerActive + " " + (hidden ? "-translate-y-full" : "translate-y-0")}
     >
-      <Logo widthLogo={100} heightLogo={50} />
+      <Logo widthLogo={101} heightLogo={21} />
       <Navbar
         conteinerNav="flex items-center max-md:hidden"
         contentLink="p-2 m-1 text-lx hover:pointer text-gray-500 hover:text-mauve-500"

@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="flex flex-col">
-        <Logo widthLogo={200} heightLogo={100} />
+        <Logo widthLogo={202} heightLogo={42} />
         <p className="font-bold text-xl mt-8 mb-[-5]">MAP SITE</p>
         <LinkNav
           conteinerLink="flex flex-row ml-[-4]"

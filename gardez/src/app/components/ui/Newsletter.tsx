@@ -4,7 +4,7 @@ export default function Newsletter() {
   return (
     <div className={styles.newsletter}>
       <h2 className={styles.ctaNewsletter}>Assine a nossa <br/> newsletter!</h2>
-      <form action={"POST"} className={styles.formNewsletter}>
+      <form action={"POST"} className={styles.formEmail}>
         <p className={styles.subtitle}>Fique por dentro das novidades</p>
         <label htmlFor="email" className={styles.groupInput}>
           <input

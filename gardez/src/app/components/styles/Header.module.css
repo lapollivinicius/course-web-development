@@ -4,7 +4,7 @@
 
 .headerActive {
     @apply flex top-0 left-0 items-center justify-between z-10;
-    @apply fixed h-[80] w-full px-10;
+    @apply fixed h-[80px] w-full px-10;
     @apply bg-white border-b border-red-300;
     @apply transition-transform duration-300;
 }

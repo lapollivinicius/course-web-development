@@ -28,7 +28,7 @@ export default function SectionCta() {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
         >
-        <Image className="object-cover" src="/png/woman.png" alt="woman" fill />
+        <Image className="object-cover" src="/png/woman.png" alt="woman" fill loading="eager"/>
       </motion.div>
     </section>
   );
