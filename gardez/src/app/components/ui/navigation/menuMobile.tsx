@@ -19,13 +19,11 @@ export function MenuIcon({
   contentLink,
   menuDisplay,
 }: menuProps) {
-  const [open, setOpen] = useState<boolean>(false);
 
+  const [open, setOpen] = useState<boolean>(false);
   const prevOverflow = useRef<string>("");
 
   useEffect(() => {
-
-    console.log(document.body.style.overflow)
 
     if (typeof document === "undefined") return;
 

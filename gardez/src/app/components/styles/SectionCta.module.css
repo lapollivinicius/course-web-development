@@ -2,7 +2,7 @@
 
 .sectionCta {
     @apply flex justify-center gap-10 flex-wrap;
-    @apply w-screen p-10 text-black bg-white;
+    @apply w-screen p-10 mt-30 text-black bg-white;
 
     .textCta {
         @apply flex flex-col justify-center;

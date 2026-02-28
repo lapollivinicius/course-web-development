@@ -36,7 +36,7 @@ export default function Header() {
       <Logo widthLogo={100} heightLogo={50} />
       <Navbar
         conteinerNav="flex items-center max-md:hidden"
-        contentLink="p-2 m-1 text-lx hover:pointer hover:text-mauve-500"
+        contentLink="p-2 m-1 text-lx hover:pointer text-gray-500 hover:text-mauve-500"
       />
       <MenuIcon menuDisplay="md:hidden" />
     </header>

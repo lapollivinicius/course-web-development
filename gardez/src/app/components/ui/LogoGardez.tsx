@@ -1,3 +1,4 @@
+import Link from "next/dist/client/link";
 import Image from "next/image";
 
 type logoProps = {
@@ -7,8 +8,8 @@ type logoProps = {
 
 export default function Logo({widthLogo = 100, heightLogo = 50}: logoProps) {
   return (
-    <div id="main-logo">
+    <Link href="/">
       <Image src="/svg/logo.svg" alt="Logo" width={widthLogo} height={heightLogo} />
-    </div>
+    </Link>
   );
 };
